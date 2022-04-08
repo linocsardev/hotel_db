@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const pkg = require('./package.json')
 
 const roomsRoutes = require('./src/routes/rooms.routes');
+const userRoutes = require('./src/routes/user.routes')
 const authRoutes = require('./src/routes/auth.routes')
 const app = express()
 
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
     })
 })
 app.use('/api/rooms', roomsRoutes)
+app.use('/api/user', userRoutes)
 app.use('/api/auth', authRoutes)
 
 

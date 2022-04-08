@@ -34,7 +34,7 @@ model.create = async (params) => {
         params.precio,
         params.piso,
         params.estado,
-        params.tipoHabitacion_idtipoHabitacion,
+        params.tipohabitacion_idtipohabitacion,
         params.banio,
         params.television,
         params.ventanas,
@@ -53,7 +53,6 @@ model.create = async (params) => {
     if(typeof result[1] != "undefined")
         if(typeof result[1][0] != "undefined")
             data= result[1][0]
-    console.log(result)
     return {codigo, data}
 }
 model.data = async (params) => {
